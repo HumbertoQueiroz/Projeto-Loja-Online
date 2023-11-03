@@ -10,3 +10,7 @@ O Front-End do projeto será desenvolvido com `HTML`, `CSS` e `JavaScript` puro 
 O site será uma loja de roupas femininas, com tema de cores voltadas para o rosa
 #### Redes Sociais
 O site deve ter link para Instagram e Whatsapp
+#### Galeria 
+O site deve ter galeria com os produtos em destaque.
+#### História da loja
+o site deve ter uma seção dedicada a falar sobre a história da loja
