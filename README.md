@@ -1,5 +1,5 @@
 # Projeto-Loja-Online
-Desenvolver projeto de Loga de Roupas online, com Front-end e Banco de Dados.
+Desenvolver projeto de Loja de Roupas online, com Front-end e Banco de Dados.
 ### Definições do projeto
 #### Banco de dados
 Esta projeto inicialmente utilizara o banco de dados `MySQL` por ser um projeto com fim didatico.
