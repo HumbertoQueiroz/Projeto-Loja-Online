@@ -12,5 +12,12 @@ O site será uma loja de roupas femininas, com tema de cores voltadas para o ros
 O site deve ter link para Instagram e Whatsapp
 #### Galeria 
 O site deve ter galeria com os produtos em destaque.
+Imagens da galeria devem ter link para tela do produto.
 #### História da loja
 o site deve ter uma seção dedicada a falar sobre a história da loja
+# Adição de Requisitos do negócio
+#### Lista dos produtos
+Seção com produtos, cada item deve ter: Imagem, descrição simples do produto, tamanhos disponíves, valor, botão de adicionar ao carrinho.
+Deve ser possível clicar e abrir tela de detalhes do produto.
+#### Tela Detalhes do produto
+Tela Detalhes do produto com descrição das especificações do produto, detalhes,  tamanho, valor, botão de adicionar ao carinho, etc
