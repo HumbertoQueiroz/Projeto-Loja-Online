@@ -1,29 +1,29 @@
 create schema LojaOnline;
 
 create table tamanhos(
-id int not null auto_increment,
+id int	unsigned not null auto_increment,
 nomeTamanho varchar(2) not null,
 primary key(id)
 );
 
 create table categoria(
-id int not null auto_increment,
-nomeCategoria varchar(30) not null,
+id int	unsigned not null auto_increment,
+nomeCategoria varchar(255) not null,
 primary key(id) 
 );
 
 create table formaPagamento(
-id int not null auto_increment,
-NomePagamento varchar(30) not null,
+id int	unsigned not null auto_increment,
+NomePagamento varchar(255) not null,
 primary key(id)
 );
 
 create table produtos(
-id int not null auto_increment,
+id int	unsigned not null auto_increment,
 tamanho int not null,
 categoria int,
 quantidade int not null,
-descricao varchar(30) not null,
+descricao varchar(255) not null,
 CodBarras varchar(15),
 VlCompra decimal(10,2),
 VlVenda decimal(10,2),
@@ -35,28 +35,31 @@ foreign key (categoria)
 );
 
 create table vendedores(
-id int not null auto_increment,
-nome varchar(30) not null,
+id int	unsigned not null auto_increment,
+nome varchar(255) not null,
 comissao int,
 primary key(id)
 );
 
 create table pedido(
-id int not null auto_increment,
+id int	unsigned not null auto_increment,
 dataPedido date not null,
 vendedor int,
 valorVenda decimal(10,2),
 formaPagamento int,
 dataPagamento date,
+cliente int,
 primary key(id),
 foreign key(vendedor)
 	references vendedores(id),
 foreign key(formaPagamento)
-	references formaPagamento(id)
+	references formaPagamento(id),
+foreign key(cliente)
+	references clientes(id)
 );
 
 create table Pedido_Produtos(
-id int not null auto_increment,
+id int	unsigned not null auto_increment,
 produto int,
 pedido int,
 quantidadeProduto int,
@@ -66,6 +69,19 @@ foreign key(produto)
 foreign key (pedido)
 	references pedido(id)
 );
+
+create table clientes(
+id int	unsigned not null auto_increment,
+cpf varchar(11) not null unique,
+nome varchar(255) not null,
+ult_pedido int,
+primary key (id) 
+);
+
+
+
+
+
 drop table categoria;
 drop table pedido;
 drop table formapagamento;
