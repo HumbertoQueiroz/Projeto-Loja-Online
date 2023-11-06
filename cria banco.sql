@@ -43,7 +43,7 @@ primary key(id)
 
 create table pedido(
 id int	unsigned not null auto_increment,
-dataPedido date not null,
+PedidoCriadoEm date not null,
 vendedor int,
 valorVenda decimal(10,2),
 formaPagamento int,
@@ -77,8 +77,6 @@ nome varchar(255) not null,
 ult_pedido int,
 primary key (id) 
 );
-
-
 
 
 
