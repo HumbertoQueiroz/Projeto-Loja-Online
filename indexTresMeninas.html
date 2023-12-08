@@ -41,17 +41,32 @@
                     <a href="#sobreNos">Sobre nós</a>
                     <a href="#NossaHistoria">Nossa missão</a>
                     <a href="#galeria">Galeria</a>
-                    <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fmalrkb&amp;e=AT3-n_rcV_IgaXiGiiL7iY-FHkkeyeuxfwFQ8h2rr7512V1kbYFCQySDU5nMIMrtV_jkWskQHapeKyoMwb-lKleoSgzn6tdCaWCXnygeWKjjUUXe_Mgn6A" target="_blank" title='Whatsapp'>Contato</a>
+                    <a href="https://api.whatsapp.com/send?phone=5566996488911" target="_blank" title='Whatsapp'>Contato</a>
                     <a href="#produtos" id="compreAgora">Comprar Agora!</a>
                 </ul>
             </nav>  
 
-            <!--Links de redes sociais-->
-            <div class='containerRedesSociais'>
-                <a href="https://www.instagram.com/ttres.meninas/" target="_blank"> <img src="https://static.cdninstagram.com/rsrc.php/v3/yR/r/lam-fZmwmvn.png" alt='Logo Instagram' width='30px' height='30px' title='Instagram'></a>
-                <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Fmalrkb&amp;e=AT3-n_rcV_IgaXiGiiL7iY-FHkkeyeuxfwFQ8h2rr7512V1kbYFCQySDU5nMIMrtV_jkWskQHapeKyoMwb-lKleoSgzn6tdCaWCXnygeWKjjUUXe_Mgn6A"><img src="https://static.whatsapp.net/rsrc.php/v3/yz/r/ujTY9i_Jhs1.png" target="_blank" alt='Logo whatsapp' width='30px' height='30px' title='Whatsapp'></a>
+            <div class="containerPaiRedesSociais">
+              <!--Links de redes sociais-->
+              <div class='containerRedesSociais'>
+                <a href="https://www.instagram.com/ttres.meninas/" target="_blank"> <img src="https://static.cdninstagram.com/rsrc.php/v3/yR/r/lam-fZmwmvn.png" alt='Logo Instagram' width='30px' height='30px' title='Instagram'  target="_blank" ></a>
+                <a href="https://api.whatsapp.com/send?phone=5566996488911" target="_blank"><img src="https://static.whatsapp.net/rsrc.php/v3/yz/r/ujTY9i_Jhs1.png" alt='Logo whatsapp' width='30px' height='30px' title='Whatsapp'></a>
+              </div>  
+              <div class="flex-center">
+                <div>
+                  <button class="btn-entrar" onclick="Logar(true)">
+                    ENTRAR
+                  </button>
+                </div>
+                <div class="CardCliente">
+                  <p>Carla</p>
+                </div>
+                <p class="btn-sair" onclick="Logar(false)">Sair</p>
+              </div>
+              
+            </div>
             
-            </div>  
+            
         </div>
     </header>
     
@@ -64,11 +79,13 @@
         <!-- Sobre nós --->
         <div class='containerSobrNos'>
             <h1>Somos a <span class='containerApresentacao__nome'>Três Meninas</span>, sua loja de moda feminina no atacado e verejo.</h1>
-            <div id="bailarina">
-                <div class="menor">✨</div>
-                <div>💃</div>
-                <div class="menor">✨</div>
+            <div id="bailarina" onmouseover="playAudio()">
+              <div class="menor">✨</div>
+              <div>💃</div>
+              <div class="menor">✨</div>
             </div>
+            <audio id="audioBrilho" src="audio/BRILHO _ EFEITO SONORO.mp3" type="audio/mp3"></audio>
+          
         </div>
         <div class="img"></div>
         <div id="NossaHistoria"></div>
@@ -89,7 +106,7 @@
         <div class="gallery-container">
             <div class="flexbox">
                 <div class="controls">
-                    <button class="prev" onclick="prevImage()">< Anterior</button>
+                    <button class="prev" onclick="prevImage()"><</button>
                 </div>
                 <div class="image-slider">
                     <img src="imagens/jovem-encantadora-de-terno-rosa-olhando-para-longe_197531-16815.jpg" alt="Imagem 1">
@@ -97,18 +114,94 @@
                     <img src="imagens/mulher-bonita-cabelos-cacheados.jpg" alt="Imagem 3">
                 </div> 
                 <div class="controls">
-                    <button class="next" onclick="nextImage()">Próximo ></button>
+                    <button class="next" onclick="nextImage()">></button>
                 </div>
             </div>
             
             <div class="indicators"></div>
         </div>
-    <section class="produtos" id="produtos">
-        <h1>Produtos</h1>
-        <div>
-            <p>Em construção</p>
-            <p>🕑</p>
+    <section  id="produtos">
+      <h1 class="tituloProdutos">Produtos</h1>  
+      <div class="produtos">
+        <div class="card">
+          <img src="imagens/cinto-gucci-gg-preto-CV22753(1)-750x937.jpg">
+          <div>
+            <h1>Cinto Feminino</h1>
+            <h2>Gucci</h2>
+            <span>R$ 200,00</span>
+            <button>Comprar</button>
+          </div>
         </div>
+
+        <div class="card">
+          <img src="imagens/sandalha.png">
+          <div>
+            <h1>Sandalha</h1>
+            <h2>Carmen Steffens</h2>
+            <span>R$ 490,00</span>
+            <button>Comprar</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imagens/Bolsa.png">
+          <div>
+            <h1>Bolsa</h1>
+            <h2>Louis Vuitton</h2>
+            <span>R$ 1500,00</span>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagens/Cculos.png">
+          <div>
+            <h1>Oculos</h1>
+            <h2>Ray Ban</h2>
+            <span>R$ 900,00</span>
+            <button>Comprar</button>
+          </div>
+        </div>
+                  
+        <div class="card">
+          <img src="imagens/brinco-pedra-ouro-18k-5mm-branca.jpg">
+          <div>
+            <h1>Brinco</h1>
+            <h2>Ouro 18K</h2>
+            <span>R$ 11.000,00</span>
+            <button>Comprar</button>
+          </div>
+        </div>
+          <div class="card">
+            <img src="imagens/pu1464.jpg">
+            <div>
+              <h1>Corrente Delicada</h1>
+              <h2>Ouro 18K</h2>
+              <span>R$ 2.300,00</span>
+              <button>Comprar</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="imagens/ANEL.jpg">
+            <div>
+              <h1>Anel</h1>
+              <h2>Diamante Azul Vivido</h2>
+              <span>R$ 7.500,00</span>
+              <button>Comprar</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="imagens/rELOGIO.jpg">
+            <div>
+              <h1>Cassio</h1>
+              <h2>Rosa Watch</h2>
+              <span>R$ 1.900,00</span>
+              <button>Comprar</button>
+            </div>
+          </div>
+        </div> 
+          
     </section>
     </main>
     <footer>

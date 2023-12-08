@@ -47,3 +47,33 @@ images.forEach((image, i) => {
 
 showImage(currentIndex);
 updateIndicators();
+
+/* Funções para logar */
+
+function Logar (entrar){
+  if(entrar){
+    const btnEntrar=document.querySelector('.btn-entrar');
+    const cardCliente=document.querySelector('.CardCliente');
+    const btnSair=document.querySelector('.btn-sair');
+    btnEntrar.style.display='none';
+    cardCliente.style.display='inline';
+    btnSair.style.display='inline';
+  }else{
+    const btnEntrar=document.querySelector('.btn-entrar');
+    const cardCliente=document.querySelector('.CardCliente');
+    const btnSair=document.querySelector('.btn-sair');
+    btnEntrar.style.display='inline';
+    cardCliente.style.display='none';
+    btnSair.style.display='none';
+  }
+}
+
+
+/* Função audio */
+
+function playAudio() {
+  const audio = document.getElementById('audioBrilho');
+  console.log(audio);
+  audio.play();
+}
+
